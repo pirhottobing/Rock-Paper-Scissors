@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Batu Gunting Kertas</title>
+  <link rel="stylesheet" href="style.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Freeman&family=Poetsen+One&display=swap" rel="stylesheet">
+</head>
+<body>
+  <main>
+    <div class="input">
+      <h1>Rock Paper Scissors</h1>
+      <div class="button">
+        <button onclick="playGame('Batu')">
+          <img src="img/batu.png" alt="Batu" class="icon">
+        </button>
+    
+        <button onclick="playGame('Gunting')">
+          <img src="img/gunting.png" alt="gunting" class="icon">
+        </button>
+    
+        <button onclick="playGame('Kertas')">
+          <img src="img/kertas.png" alt="kertas" class="icon">
+        </button>
+      </div>
+    
+      <div class="komputer"></div>
+      <p class="hasil"></p>
+    </div>
+
+    <div class="output">
+      <h2>Score</h2>
+      <p class="score"></p>
+
+      <button class="reset" onclick="
+        score.Menang = 0;
+        score.Kalah = 0;
+        score.Seri = 0;
+        localStorage.removeItem('score');
+        resetScore();
+        ">Reset</button>
+    </div>
+  </main>
+  
+  <script src="script.js"></script>
+</body>
+</html>
